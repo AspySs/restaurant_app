@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F3CCA006-E9B5-4D1B-935E-25F5514932D5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BDnet</RootNamespace>
+    <AssemblyName>BDnet</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adminPages\addNewPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\addNewPerson.Designer.cs">
+      <DependentUpon>addNewPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminPages\allView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\allView.Designer.cs">
+      <DependentUpon>allView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminPages\chefsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\chefsView.Designer.cs">
+      <DependentUpon>chefsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBUtils.cs" />
+    <Compile Include="adminPages\dish_statistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\dish_statistic.Designer.cs">
+      <DependentUpon>dish_statistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminPages\mainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\mainWindow.Designer.cs">
+      <DependentUpon>mainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminPages\Order_compos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\Order_compos.Designer.cs">
+      <DependentUpon>Order_compos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminPages\personalStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\personalStat.Designer.cs">
+      <DependentUpon>personalStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminPages\PersonalUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\PersonalUpdate.Designer.cs">
+      <DependentUpon>PersonalUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminPages\oficiantsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\oficiantsView.Designer.cs">
+      <DependentUpon>oficiantsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chefPages\mainWindowChefs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chefPages\mainWindowChefs.Designer.cs">
+      <DependentUpon>mainWindowChefs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oficiantPages\get_check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oficiantPages\get_check.Designer.cs">
+      <DependentUpon>get_check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oficiantPages\mainWindowOficiants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oficiantPages\mainWindowOficiants.Designer.cs">
+      <DependentUpon>mainWindowOficiants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oficiantPages\menuStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oficiantPages\menuStatistic.Designer.cs">
+      <DependentUpon>menuStatistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oficiantPages\order_compos_ofic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oficiantPages\order_compos_ofic.Designer.cs">
+      <DependentUpon>order_compos_ofic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="adminPages\smallView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\smallView.Designer.cs">
+      <DependentUpon>smallView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chefPages\receipt_for.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chefPages\receipt_for.Designer.cs">
+      <DependentUpon>receipt_for.cs</DependentUpon>
+    </Compile>
+    <Compile Include="smena_money.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="smena_money.Designer.cs">
+      <DependentUpon>smena_money.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="adminPages\addNewPerson.resx">
+      <DependentUpon>addNewPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPages\dish_statistic.resx">
+      <DependentUpon>dish_statistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPages\allView.resx">
+      <DependentUpon>allView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPages\chefsView.resx">
+      <DependentUpon>chefsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPages\mainWindow.resx">
+      <DependentUpon>mainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPages\Order_compos.resx">
+      <DependentUpon>Order_compos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPages\personalStat.resx">
+      <DependentUpon>personalStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPages\PersonalUpdate.resx">
+      <DependentUpon>PersonalUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPages\oficiantsView.resx">
+      <DependentUpon>oficiantsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chefPages\mainWindowChefs.resx">
+      <DependentUpon>mainWindowChefs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oficiantPages\get_check.resx">
+      <DependentUpon>get_check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oficiantPages\mainWindowOficiants.resx">
+      <DependentUpon>mainWindowOficiants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oficiantPages\menuStatistic.resx">
+      <DependentUpon>menuStatistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oficiantPages\order_compos_ofic.resx">
+      <DependentUpon>order_compos_ofic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="adminPages\smallView.resx">
+      <DependentUpon>smallView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chefPages\receipt_for.resx">
+      <DependentUpon>receipt_for.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="smena_money.resx">
+      <DependentUpon>smena_money.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
